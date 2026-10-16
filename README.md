@@ -48,9 +48,3 @@ make clean
 | `ghost.c` | Ghost behaviour: moving, leaving evidence, getting bored |
 | `hunter.c` | Hunter behaviour: moving, collecting evidence, fear |
 | `evidence.c` | Evidence linked list, plus sharing evidence between hunters |
-
-## What I'd improve now
-
-- Fix the remaining compiler warnings (`gcc -Wall`) and free every bit of memory (check with `valgrind`).
-- Use `pthread_mutex_t` for the room locks. A mutex is a clearer fit than a semaphore when you only need "one at a time".
-- Add a random seed option so a run can be repeated exactly. That makes timing bugs much easier to debug.
